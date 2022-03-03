@@ -120,3 +120,4 @@ D:\rookies\Assignment1\BookStoreOnl\obj\Debug\net5.0\refint\BookStoreOnl.dll
 D:\rookies\Assignment1\BookStoreOnl\obj\Debug\net5.0\BookStoreOnl.pdb
 D:\rookies\Assignment1\BookStoreOnl\obj\Debug\net5.0\BookStoreOnl.genruntimeconfig.cache
 D:\rookies\Assignment1\BookStoreOnl\obj\Debug\net5.0\ref\BookStoreOnl.dll
+D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\FluentAssertions.dll

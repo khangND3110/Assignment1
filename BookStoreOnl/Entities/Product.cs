@@ -13,5 +13,6 @@ namespace BookStoreOnl.Entities
         public string Type { get; set; }
         public string Author { get; set; }
         public int QuantityInStock { get; set; }
+        public int Rating { get; set; }
     }
 }

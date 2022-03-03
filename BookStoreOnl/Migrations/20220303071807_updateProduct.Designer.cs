@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookStoreOnl.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20220228034521_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20220303071807_updateProduct")]
+    partial class updateProduct
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -43,6 +43,9 @@ namespace BookStoreOnl.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<int>("QuantityInStock")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Rating")
                         .HasColumnType("int");
 
                     b.Property<string>("Type")

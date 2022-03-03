@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "14ujz5dU2SQ76yE9Ab6PTwyigpZBH4n5DA0JFXMxZHIg3RxMKmEzd76l4N/oqw3cSaUGJR3Dy0hq1biCW04ysg==",
+  "dgSpecHash": "2FiV3kCcjN4qQvr2gZTI7x+kVcy5csd+ULtX9iZVazF5bv8l86u03mJKdqXRi6rFedwAnKtgK9UpCfbwo/HUmQ==",
   "success": true,
   "projectFilePath": "D:\\rookies\\Assignment1\\BookStoreOnl\\BookStoreOnl.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Duc Khang\\.nuget\\packages\\fluentassertions\\6.5.1\\fluentassertions.6.5.1.nupkg.sha512",
     "C:\\Users\\Duc Khang\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Duc Khang\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Duc Khang\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
