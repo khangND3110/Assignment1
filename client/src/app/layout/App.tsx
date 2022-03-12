@@ -1,38 +1,70 @@
-import { response } from "express";
-import { useEffect, useState } from "react";
-import { Product } from "../model/produc";
+
+import { Container, CssBaseline, Typography } from "@mui/material";
+import { useCallback, useEffect, useState } from "react";
+import { Route} from "react-router-dom";
+import Catalog from "../../features/catalog/Catalog";
+import Login from "../../features/account/Login";
+import { Product } from "../model/product";
+import Header from "./Header";
+import { Switch } from "react-router-dom";
+import Register from "../../features/account/Register";
+import { useAppDispatch } from "../store/configureStore";
+import { fetchCurrentUser } from "../../features/account/accountSlice";
+
 
 function App() {
-    const[products, setProducts] = useState<Product[]>([]);
+    const dispatch = useAppDispatch();
+    // const[products, setProducts] = useState<Product[]>([]);
 
+    // useEffect(() => {
+    //  fetch('http://localhost:5000/api/products')
+    //  .then(response => response.json())
+    //  .then(data =>  setProducts(data))
+    // }, [])
+    const [loading, setLoading] = useState(true);
+
+    const initApp = useCallback(async () => {
+      try {
+        await dispatch(fetchCurrentUser());
+      } catch (error) {
+        console.log(error);
+      }
+    }, [dispatch])
+  
     useEffect(() => {
-     fetch('http://localhost:5000/api/products')
-     .then(response => response.json())
-     .then(data =>  setProducts(data))
-    }, [])
+      initApp().then(() => setLoading(false));
+    }, [initApp])
 
-    function addProduct() {
-        setProducts(prevState => [...prevState,
-        {
-            id: prevState.length +101,
-            name: 'product' + (prevState.length + 1),
-            price: (prevState.length *100) +100,
-            author: 'some people',
-            description: 'some description',
-            pictureUrl: 'http://picsum.photo.200'
-        }])
-    }
+    useEffect(() =>{
+        dispatch(fetchCurrentUser());
+    })
+
+
+    // function addProduct() {
+    //     setProducts(prevState => [...prevState,
+    //     {
+    //         id: prevState.length +101,
+    //         name: 'product' + (prevState.length + 1),
+    //         price: (prevState.length *100) +100,
+    //         author: 'some people',
+    //         description: 'some description',
+    //         pictureUrl: 'http://picsum.photos/200'
+    //     }])
+    // }
 
     return(
-        <div>
-            <h1>Re-store</h1>
-            <ul>
-                {products.map(product =>(
-                    <li key={product.id}>{product.name} - {product.price}</li>
-                ))}
-            </ul>
-            <button onClick={addProduct}>Add product</button>
-        </div>
+        <>
+            <CssBaseline/>
+            <Header />       
+             <Container>
+                 <Switch>
+                 <Route exact path='/' component={Catalog} />
+                 <Route path='/login' component={Login} />
+                 <Route path='/register' component={Register} />
+                 </Switch>
+            </Container> 
+            
+        </>
     )
     
 }

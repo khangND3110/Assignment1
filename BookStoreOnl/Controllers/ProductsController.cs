@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace BookStoreOnl.Controllers
 {
-    [ApiController]
-    [Route("api/[Controller]")]
-    public class ProductsController : ControllerBase
+
+    public class ProductsController : BaseApiController
     {
         private readonly StoreContext _context;
 

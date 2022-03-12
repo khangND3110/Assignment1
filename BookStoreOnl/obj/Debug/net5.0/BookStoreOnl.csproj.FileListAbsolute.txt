@@ -83,7 +83,6 @@ D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Microsoft.IdentityModel.Pro
 D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Microsoft.OpenApi.dll
-D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Newtonsoft.Json.dll
 D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -121,3 +120,9 @@ D:\rookies\Assignment1\BookStoreOnl\obj\Debug\net5.0\BookStoreOnl.pdb
 D:\rookies\Assignment1\BookStoreOnl\obj\Debug\net5.0\BookStoreOnl.genruntimeconfig.cache
 D:\rookies\Assignment1\BookStoreOnl\obj\Debug\net5.0\ref\BookStoreOnl.dll
 D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\FluentAssertions.dll
+D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
