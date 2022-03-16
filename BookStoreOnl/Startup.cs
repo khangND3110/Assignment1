@@ -1,5 +1,6 @@
 using BookStoreOnl.Data;
 using BookStoreOnl.Entities;
+using BookStoreOnl.RequestHelpers;
 using BookStoreOnl.Services;
 using FluentAssertions.Common;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -36,6 +37,7 @@ namespace BookStoreOnl
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddAutoMapper(typeof(MappingProfiles).Assembly);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "BookStoreOnl", Version = "v1" });
@@ -66,7 +68,8 @@ namespace BookStoreOnl
                         new List<string>()
                     }
 
-                 });
+                 }
+                );
              });
                 services.AddDbContext<StoreContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -94,6 +97,7 @@ namespace BookStoreOnl
                     });
                 services.AddAuthorization();
                 services.AddScoped<TokenService>();
+                services.AddScoped<ImageService>();
             
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -109,6 +113,10 @@ namespace BookStoreOnl
             //app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
+            app.UseDeveloperExceptionPage();
 
             app.UseCors(opt =>
             {
@@ -121,6 +129,7 @@ namespace BookStoreOnl
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapFallbackToController("Index", "Fallback");
             });
         }
     }

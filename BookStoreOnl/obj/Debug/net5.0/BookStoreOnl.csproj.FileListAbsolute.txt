@@ -115,7 +115,6 @@ D:\rookies\Assignment1\BookStoreOnl\obj\Debug\net5.0\staticwebassets\BookStoreOn
 D:\rookies\Assignment1\BookStoreOnl\obj\Debug\net5.0\BookStoreOnl.RazorTargetAssemblyInfo.cache
 D:\rookies\Assignment1\BookStoreOnl\obj\Debug\net5.0\BookStoreOnl.csproj.CopyComplete
 D:\rookies\Assignment1\BookStoreOnl\obj\Debug\net5.0\BookStoreOnl.dll
-D:\rookies\Assignment1\BookStoreOnl\obj\Debug\net5.0\refint\BookStoreOnl.dll
 D:\rookies\Assignment1\BookStoreOnl\obj\Debug\net5.0\BookStoreOnl.pdb
 D:\rookies\Assignment1\BookStoreOnl\obj\Debug\net5.0\BookStoreOnl.genruntimeconfig.cache
 D:\rookies\Assignment1\BookStoreOnl\obj\Debug\net5.0\ref\BookStoreOnl.dll
@@ -126,3 +125,9 @@ D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Microsoft.AspNetCore.Crypto
 D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\AutoMapper.dll
+D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\CloudinaryDotNet.dll
+D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Microsoft.Extensions.WebEncoders.dll
+D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\ref\BookStoreOnl.dll

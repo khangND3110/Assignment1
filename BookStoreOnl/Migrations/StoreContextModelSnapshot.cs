@@ -41,6 +41,9 @@ namespace BookStoreOnl.Migrations
                     b.Property<long>("Price")
                         .HasColumnType("bigint");
 
+                    b.Property<string>("PublicId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("QuantityInStock")
                         .HasColumnType("int");
 
@@ -149,15 +152,15 @@ namespace BookStoreOnl.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "d0edbfa6-5c62-42c0-88d2-707244a9ef2e",
-                            ConcurrencyStamp = "a0b6aaf6-f320-43ac-af1d-7ceeb925e5cb",
+                            Id = "191a02b2-4754-48b1-9472-5caf235c5db5",
+                            ConcurrencyStamp = "fff1c580-7a47-42c0-afc6-9285e8e9d5d0",
                             Name = "Member",
                             NormalizedName = "MEMBER"
                         },
                         new
                         {
-                            Id = "22169e23-aa39-492e-a34d-faa2a70d3c34",
-                            ConcurrencyStamp = "d0ac75b9-396d-4ca9-b735-9c567137b381",
+                            Id = "8ece3653-f991-472f-9549-8bffa8e679d3",
+                            ConcurrencyStamp = "446e03a1-db23-4206-ae6f-6b048dbbb724",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
