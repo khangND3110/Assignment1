@@ -8,6 +8,7 @@ const rightLinks =[
   {title: 'Register', path: '/register'},
 ]
 
+
 const navStyles ={
   color: 'inherit',
   textDecoration: 'none',
@@ -30,6 +31,16 @@ export default function Header() {
                 sx={navStyles}>
                 BookStore 
             </Typography>
+            <List sx={{ display: 'flex' }}>
+                    <ListItem
+                        component={NavLink}
+                        to={'/inventory'}
+                        sx={navStyles}
+                    >
+                        INVENTORY
+                    </ListItem>
+                </List>
+
             {user ? (
               <SignedInMenu />
             ):(

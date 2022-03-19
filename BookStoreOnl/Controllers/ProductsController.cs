@@ -9,6 +9,8 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BookStoreOnl.Extensions;
+using BookStoreOnl.RequestHelpers;
 
 namespace BookStoreOnl.Controllers
 {
@@ -26,9 +28,20 @@ namespace BookStoreOnl.Controllers
             _context = context;
         }
         [HttpGet]
-        public async Task<ActionResult<List<Product>>> GetProducts()
+        public async Task<ActionResult<PagedList<Product>>> GetProducts([FromQuery] ProductParams productParams)
         {
-          return await _context.Products.ToListAsync();
+            var query = _context.Products
+                .Sort(productParams.OrderBy)
+                .Search(productParams.SearchTerm)
+                .Filter(productParams.Brands, productParams.Types)
+                .AsQueryable();
+
+            var products = await PagedList<Product>.ToPagedList(query,
+                productParams.PageNumber, productParams.PageSize);
+
+            Response.AddPaginationHeader(products.MetaData);
+
+            return products;
         }
 
 
@@ -51,7 +64,7 @@ namespace BookStoreOnl.Controllers
             return Ok(new { brands, types });
         }
 
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult<Product>> CreateProduct([FromForm] CreateProductDto productDto)
         {
@@ -77,7 +90,7 @@ namespace BookStoreOnl.Controllers
             return BadRequest(new ProblemDetails { Title = "Problem creating new product" });
         }
 
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpPut]
         public async Task<ActionResult<Product>> UpdateProduct([FromForm]UpdateProductDto productDto)
         {
@@ -109,7 +122,7 @@ namespace BookStoreOnl.Controllers
         }
     
 
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteProduct(int id)
         {
