@@ -152,15 +152,15 @@ namespace BookStoreOnl.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "191a02b2-4754-48b1-9472-5caf235c5db5",
-                            ConcurrencyStamp = "fff1c580-7a47-42c0-afc6-9285e8e9d5d0",
+                            Id = "26b64a0a-25fb-4c31-ac3f-9082accca65f",
+                            ConcurrencyStamp = "a6c333ef-e9b8-4e16-88df-53a2eabd4ea4",
                             Name = "Member",
                             NormalizedName = "MEMBER"
                         },
                         new
                         {
-                            Id = "8ece3653-f991-472f-9549-8bffa8e679d3",
-                            ConcurrencyStamp = "446e03a1-db23-4206-ae6f-6b048dbbb724",
+                            Id = "57892f56-563c-4e22-8d77-de2ab567b9b4",
+                            ConcurrencyStamp = "2bf69eea-63cc-45e0-9c38-d0306ca20658",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });

@@ -35,6 +35,7 @@ export default function ProductForm({ product, cancelEdit }: Props) {
     }, [product, reset, watchFile, isDirty]);
 
     async function handleSubmitData(data: FieldValues) {
+        // console.log(data)
         try {
             let response: Product;
             if (product) {

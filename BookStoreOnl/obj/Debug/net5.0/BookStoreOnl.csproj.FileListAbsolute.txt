@@ -130,4 +130,4 @@ D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\AutoMapper.Extensions.Micro
 D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\CloudinaryDotNet.dll
 D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Microsoft.Extensions.WebEncoders.dll
 D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\Newtonsoft.Json.dll
-D:\rookies\Assignment1\BookStoreOnl\bin\Debug\net5.0\ref\BookStoreOnl.dll
+D:\rookies\Assignment1\BookStoreOnl\obj\Debug\net5.0\refint\BookStoreOnl.dll

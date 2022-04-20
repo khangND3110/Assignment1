@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jdOVW891gMNDSez5Jzy9/hTVbm0RGMqWsJsbkt7cGjiJ6PXhkLPSR4nzrgwU2nJtpvRHOSCZPkc7XtF26vwI/g==",
+  "dgSpecHash": "KOHOko97qn+vkHHdv6ts/tv+eB9Po8HXz8qhymHr6TgzHMcZwxV/Ogz31qrnhyTV2GwfX89IHug1V3c8N8vgnw==",
   "success": true,
   "projectFilePath": "D:\\rookies\\Assignment1\\BookStoreOnl\\BookStoreOnl.csproj",
   "expectedPackageFiles": [
@@ -118,8 +118,7 @@
     "C:\\Users\\Duc Khang\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Duc Khang\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Duc Khang\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Duc Khang\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\Duc Khang\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
+    "C:\\Users\\Duc Khang\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

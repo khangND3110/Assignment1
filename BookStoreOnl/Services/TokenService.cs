@@ -13,8 +13,9 @@ namespace BookStoreOnl.Services
 {
     public class TokenService
     {
-        private readonly UserManager<User> _userManager;
         private readonly IConfiguration _config;
+        private readonly UserManager<User> _userManager;
+        
         public TokenService(UserManager<User> userManager, IConfiguration config)
         {
             _config = config;

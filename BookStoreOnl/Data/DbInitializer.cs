@@ -1,5 +1,6 @@
 ﻿using BookStoreOnl.Entities;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,11 +23,12 @@ namespace BookStoreOnl.Data
 
                 var admin = new User
                 {
-                    UserName = "admin",
+                    UserName = "admin1",
                     Email = "admin@test.com"
                 };
                 await userManager.CreateAsync(admin, "Pa$$w0rd");
-                await userManager.AddToRolesAsync(admin, new[] {"Member", "Admin"});
+                await userManager.AddToRolesAsync(admin, new[] { "Member", "Admin" });
+
             }
 
             if (context.Products.Any()) return;

@@ -33,7 +33,7 @@ namespace BookStoreOnl.Controllers
             var query = _context.Products
                 .Sort(productParams.OrderBy)
                 .Search(productParams.SearchTerm)
-                .Filter(productParams.Brands, productParams.Types)
+                .Filter(productParams.Author, productParams.Types)
                 .AsQueryable();
 
             var products = await PagedList<Product>.ToPagedList(query,
@@ -64,7 +64,7 @@ namespace BookStoreOnl.Controllers
             return Ok(new { brands, types });
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult<Product>> CreateProduct([FromForm] CreateProductDto productDto)
         {
@@ -90,7 +90,7 @@ namespace BookStoreOnl.Controllers
             return BadRequest(new ProblemDetails { Title = "Problem creating new product" });
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPut]
         public async Task<ActionResult<Product>> UpdateProduct([FromForm]UpdateProductDto productDto)
         {
@@ -122,7 +122,7 @@ namespace BookStoreOnl.Controllers
         }
     
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteProduct(int id)
         {

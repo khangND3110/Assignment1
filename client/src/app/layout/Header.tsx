@@ -17,7 +17,7 @@ const navStyles ={
     color: ' bluegrey.500'
   },
   '&.active': {
-    color: 'text.secondary'
+    color: 'text.default'
   }
 }
 
@@ -25,21 +25,23 @@ export default function Header() {
 
   const {user} = useAppSelector(state => state.account)
   return (
-    <AppBar position ='static' sx={{mb:4}} color ='primary'>
+    <AppBar position ='static' sx={{mb:4}} style={{backgroundColor: "#CF2338"}}>
         <Toolbar sx={{display: 'flex', justifyContent:'space-between', alignItems: 'center'}}>
             <Typography variant='h6'component={NavLink} exact to='/'
                 sx={navStyles}>
                 BookStore 
             </Typography>
+            
             <List sx={{ display: 'flex' }}>
+              {user && user.roles?.includes('Admin') &&
                     <ListItem
                         component={NavLink}
                         to={'/inventory'}
                         sx={navStyles}
                     >
                         INVENTORY
-                    </ListItem>
-                </List>
+                    </ListItem> }
+            </List>
 
             {user ? (
               <SignedInMenu />

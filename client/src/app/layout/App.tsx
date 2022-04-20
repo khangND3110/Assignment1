@@ -11,6 +11,8 @@ import Register from "../../features/account/Register";
 import { useAppDispatch } from "../store/configureStore";
 import { fetchCurrentUser } from "../../features/account/accountSlice";
 import Inventory from "../../features/admin/Inventory";
+import PrivateRoute from "./PrivateRoute";
+import HomePage from "../../features/home/HomePage";
 
 
 function App() {
@@ -56,16 +58,20 @@ function App() {
     return(
         <>
             <CssBaseline/>
-            <Header />       
+    
+            <Header />   
+            <Route exact path='/' component={HomePage} />    
+            <Route path={'/(.+)'} render={() => (
              <Container>
                  <Switch>
-                 <Route exact path='/inventory' component={Inventory} />
+                 
+                 <PrivateRoute roles={['Admin']} path='/inventory' component={Inventory} />
                  <Route path='/login' component={Login} />
                  <Route path='/register' component={Register} />
                  {/* <Route path='/inventory' component={Inventory} /> */}
                  </Switch>
             </Container> 
-            
+            )}/>
         </>
     )
     

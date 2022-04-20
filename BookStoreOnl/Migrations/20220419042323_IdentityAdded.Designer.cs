@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookStoreOnl.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20220307071024_IdentityAdded")]
+    [Migration("20220419042323_IdentityAdded")]
     partial class IdentityAdded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,6 +42,9 @@ namespace BookStoreOnl.Migrations
 
                     b.Property<long>("Price")
                         .HasColumnType("bigint");
+
+                    b.Property<string>("PublicId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("QuantityInStock")
                         .HasColumnType("int");
@@ -151,15 +154,15 @@ namespace BookStoreOnl.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "d0edbfa6-5c62-42c0-88d2-707244a9ef2e",
-                            ConcurrencyStamp = "a0b6aaf6-f320-43ac-af1d-7ceeb925e5cb",
+                            Id = "26b64a0a-25fb-4c31-ac3f-9082accca65f",
+                            ConcurrencyStamp = "a6c333ef-e9b8-4e16-88df-53a2eabd4ea4",
                             Name = "Member",
                             NormalizedName = "MEMBER"
                         },
                         new
                         {
-                            Id = "22169e23-aa39-492e-a34d-faa2a70d3c34",
-                            ConcurrencyStamp = "d0ac75b9-396d-4ca9-b735-9c567137b381",
+                            Id = "57892f56-563c-4e22-8d77-de2ab567b9b4",
+                            ConcurrencyStamp = "2bf69eea-63cc-45e0-9c38-d0306ca20658",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
