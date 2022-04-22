@@ -88,6 +88,21 @@ export default function Register() {
                     error={!!errors.password}
                     helperText={errors?.password?.message}
                 />
+                <TextField
+                    margin="normal"
+                    fullWidth
+                    label="Re-Password"
+                    type="password"
+                    {...register('confirmPwd', { 
+                      required: 'Password is required',
+                      pattern: {
+                          value: /(?=^.{6,10}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&amp;*()_+}{&quot;:;'?/&gt;.&lt;,])(?!.*\s).*$/, 
+                          message: 'password does not match'
+                      }
+                    })}
+                    error={!!errors.confirmPwd}
+                    helperText={errors?.confirmPwd?.message}
+                />
                 
                 <LoadingButton
                     disabled={!isValid}
